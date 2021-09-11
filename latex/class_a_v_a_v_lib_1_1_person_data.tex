@@ -1,0 +1,544 @@
+\hypertarget{class_a_v_a_v_lib_1_1_person_data}{}\doxysection{AVAVLib.\+Person\+Data Class Reference}
+\label{class_a_v_a_v_lib_1_1_person_data}\index{AVAVLib.PersonData@{AVAVLib.PersonData}}
+
+
+Version eines Datensatzes zu einer \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}}, bei Änderungen werden immer neue Versionen erstellt, der laut Zeitstempel letzte gültige (valid) Datensatz ist der aktuelle Stand. Mitglieder können schwebende Datensätze anlegen, bei diesen ist dann valid=false  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a195c4ea7e3a39aac578834c582896d72}{Valid}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Zeigt an, ob der Datensatz schwebt oder schon von einem Schriftwart übernommen wurde. \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a11521b83833a0eb0a38194f10089fe01}{Time\+Stamp}} = Date\+Time.\+Now\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Zeitpunkt der Erstellung \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_a_v_a_v_lib_1_1_change_handle}{Change\+Handle}} \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a0d38efa856e05180e12c79f00a497f9d}{Change\+Handle}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Only one handle, since changes are stored in new \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} Records \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a4116a54da2ad5174b213447d93deb178}{Person}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} zu der die Datensatzversion gehört \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245}{Gender}} \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a9f2c4a15818df336795ce897655c4291}{Gender}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Geschlechtliche Identität \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_addd6bf4cd5cb1fa5e6a66480ba0e645a}{Prefix\+Title}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Akademische Grade, die vor den Namen gestellt werden. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_af40463d48f03dbcf4855f23781cc9ce3}{Suffix\+Title}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Akademische Grade, die hinter den Namen gestellt werden. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a86d7ff5beec867fc26380229946d1c6a}{Staatsexamen\+Profession}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Staatsexamen oder sonstige Berufsabschlüsse. Die Lehrer legen da Wert drauf, denn die bekommen kein Diplom und sind dann irgendwann Studienrat oder so was. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a53416e223ac112eefd172ea5a83de2bb}{Given\+Name\+Prefix}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Präfix für einen Vornamen, z.\+B. De Witt, würde nach Witt einsortiert, weil De ein Präfix ist. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a9d57cacc0a92cb099b8c513b410ea6d0}{Given\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Erster Vorname \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a42087b722963f4317d62ccb4e9349bc3}{Additional\+Names}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Weitere Vornamen \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_ae127e6f6a3db1048788fab45a54c217c}{Name\+Prefix}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Präfix zum Familiennamen, z.\+B. von -\/-\/\texorpdfstring{$>$}{>} Sortierung \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a5376922f685d30a29f9f3eb87c135b35}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Familienname \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_adb753257e2423909ae1b7449e754b291}{Name\+Suffix}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Anhang zum Familiennamen, z.\+B. sen., jun., III. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_aa50ba329b6149d73c2c315383080a6d0}{Maiden\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Geburtsname \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a0f90446a1d91418037322efdaad57a99}{Nickname}} = null\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Biername \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a0985e47817a33be50b6d4d5ea7466860}{Is\+EMail\+Official\+Visible}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sollen alle Bundesgeschwister die offizielle EMail-\/\+Addresse sehen? \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a26234e5f5023967b7db8e6912118c0e3}{EMail\+Official}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Offizielle EMail-\/\+Address, z.\+B. zur Verwendung bei Einladungen zur MV \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a7a6459adc0002ab7c31e80fae3bb85fd}{Is\+EMail\+Stuff\+Visible}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sollen alle Bundesgeschwister die zusätzliche EMail-\/\+Addresse sehen? \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a6e7cfdf0dc402e0f4fa75c1b6b7835c5}{EMail\+Stuff}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em EMail-\/\+Adresse für Verteiler. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a017acd9f2bb801aa8e5f7ef7ac3c0f0c}{Is\+Birthday\+Visible}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sollen alle Bundesgeschwister meinen Geburtstag sehen? \end{DoxyCompactList}\item 
+Date\+Time? \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a440c54014bf98739f743dd60a4b5cfc5}{Birthday}} = null\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Geburtstag \end{DoxyCompactList}\item 
+Date\+Time? \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_ad7edf1fe7019761f492e5324e1d3476a}{Date\+Of\+Death}} = null\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Todestage -\/-\/\texorpdfstring{$>$}{>} Ist Nullable, d.\+h. Is\+Alive oder Kenner für Verstorben sollten immer aus diesem Datum abgeleitet werden. \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_afb80327ccbe5b36521e46358b75bff3f}{Is\+Birth\+Place\+Visible}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sollen alle Bundesgeschwister meinen Geburtsort sehen können? \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_ac3a199004cede81d949054bb118e718f}{Birth\+Place}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Geburtsort \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_aba3f74aa1260a3c717b36f1e400b47f8}{Is\+Av\+Colony\+Visible}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sollen alle Bundesgeschwister meine AV-\/\+Kolonie sehen? \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_afdf7daa5662f205d28bcb4854689361e}{Av\+Colony}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em AV-\/\+Kolonie \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_ae5b0c29ea29f4ef3aee9dc98ac95acbf}{Is\+Mobil\+Tel\+Offcial\+Visible}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sollen alle Bundesgeschwister meine offizielle Mobil-\/\+Telefonummer sehen? \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a1d960fd59fca82355e19ef1933bc5902}{Mobil\+Tel\+Official}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Offzielle Mobil-\/\+Telefonnummer \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a690ddc7ecbdcc9b9e39f11d8033a6d86}{Is\+Mobil\+Tel\+Add1\+Visible}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sollen alle Bundesgeschwister meine 1. zusätzliche Mobil-\/\+Telefonummer sehen? \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_abbe29e85160f2d04e964652ac576d271}{Mobil\+Tel\+Add1}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_ae4fbafc41a1890b3cebd275b943622a3}{Is\+Mobil\+Tel\+Add2\+Visible}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sollen alle Bundesgeschwister meine 2. zusätzliche Mobil-\/\+Telefonummer sehen? \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a93798cebf2cebaa60181022c113ebefa}{Mobil\+Tel\+Add2}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a286e7f780b12a42e529034197ea11837}{Is\+Web\+Site\+Visible}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sollen alle Bundesgeschwister meine web-\/\+Site sehen? \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a18c50adee146d3edce84f6ec46af6e97}{Web\+Site}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Web-\/\+Site \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_a_v_a_v_lib_a5d649d755fea6060a7d34e5d03f21e4b}{Authority}} \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_aa68892f2d2bb172f4993d368b64cd649}{Authority}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Zuständigkeit (Verwaltung des Datensatzes) \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a988d8543f5f6c26150141fb548e81a3e}{Debit\+Nummer}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Debitorennummer -- sollten wir eigentlich rauswerfen und nur noch die AVID verwenden. \end{DoxyCompactList}\item 
+Date\+Time? \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a2a864ca1356fe211d711ce8c6d6ab324}{Birthday\+In\+Year}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Geburtstag im Jahr, Beispielcode für die Sortierte Darstellung im Mitgliederverzeichnis \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_abd1661b9ced50056e65aa83a8b12a44f}{Display\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sample Code -\/ Vollständiger Name der \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_ad3122ad946df14162e2fa3646726ac6c}{Display\+Short\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sample Code -\/ Kurzer Name der \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} zur Anzeige \end{DoxyCompactList}\item 
+IEnumerable$<$ string $>$ \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a27c535ecffd10fb33f1e3c6f3198cd24}{EMails}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sample Code, ermittelt die EMail-\/\+Addressen als Liste. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a3d2caed3bdfd12a342c6dd048fb1ec6a}{Display\+Internal\+With\+EMails}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sample Code -\/ Interner Anzeigename der \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} mit EMails \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data_a84b2ac01aae1c993d29beda876e987bf}{Display\+Internal}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sample Code -\/ Interner Anzeigename der \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Version eines Datensatzes zu einer \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}}, bei Änderungen werden immer neue Versionen erstellt, der laut Zeitstempel letzte gültige (valid) Datensatz ist der aktuelle Stand. Mitglieder können schwebende Datensätze anlegen, bei diesen ist dann valid=false 
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a42087b722963f4317d62ccb4e9349bc3}\label{class_a_v_a_v_lib_1_1_person_data_a42087b722963f4317d62ccb4e9349bc3}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!AdditionalNames@{AdditionalNames}}
+\index{AdditionalNames@{AdditionalNames}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{AdditionalNames}{AdditionalNames}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Additional\+Names\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Weitere Vornamen 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_aa68892f2d2bb172f4993d368b64cd649}\label{class_a_v_a_v_lib_1_1_person_data_aa68892f2d2bb172f4993d368b64cd649}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!Authority@{Authority}}
+\index{Authority@{Authority}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{Authority}{Authority}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_a_v_a_v_lib_a5d649d755fea6060a7d34e5d03f21e4b}{Authority}} AVAVLib.\+Person\+Data.\+Authority\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Zuständigkeit (Verwaltung des Datensatzes) 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_afdf7daa5662f205d28bcb4854689361e}\label{class_a_v_a_v_lib_1_1_person_data_afdf7daa5662f205d28bcb4854689361e}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!AvColony@{AvColony}}
+\index{AvColony@{AvColony}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{AvColony}{AvColony}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Av\+Colony\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+AV-\/\+Kolonie 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a440c54014bf98739f743dd60a4b5cfc5}\label{class_a_v_a_v_lib_1_1_person_data_a440c54014bf98739f743dd60a4b5cfc5}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!Birthday@{Birthday}}
+\index{Birthday@{Birthday}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{Birthday}{Birthday}}
+{\footnotesize\ttfamily Date\+Time? AVAVLib.\+Person\+Data.\+Birthday = null\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Geburtstag 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a2a864ca1356fe211d711ce8c6d6ab324}\label{class_a_v_a_v_lib_1_1_person_data_a2a864ca1356fe211d711ce8c6d6ab324}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!BirthdayInYear@{BirthdayInYear}}
+\index{BirthdayInYear@{BirthdayInYear}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{BirthdayInYear}{BirthdayInYear}}
+{\footnotesize\ttfamily Date\+Time? AVAVLib.\+Person\+Data.\+Birthday\+In\+Year\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Geburtstag im Jahr, Beispielcode für die Sortierte Darstellung im Mitgliederverzeichnis 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_ac3a199004cede81d949054bb118e718f}\label{class_a_v_a_v_lib_1_1_person_data_ac3a199004cede81d949054bb118e718f}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!BirthPlace@{BirthPlace}}
+\index{BirthPlace@{BirthPlace}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{BirthPlace}{BirthPlace}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Birth\+Place\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Geburtsort 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a0d38efa856e05180e12c79f00a497f9d}\label{class_a_v_a_v_lib_1_1_person_data_a0d38efa856e05180e12c79f00a497f9d}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!ChangeHandle@{ChangeHandle}}
+\index{ChangeHandle@{ChangeHandle}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{ChangeHandle}{ChangeHandle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_v_a_v_lib_1_1_change_handle}{Change\+Handle}} AVAVLib.\+Person\+Data.\+Change\+Handle\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Only one handle, since changes are stored in new \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} Records 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_ad7edf1fe7019761f492e5324e1d3476a}\label{class_a_v_a_v_lib_1_1_person_data_ad7edf1fe7019761f492e5324e1d3476a}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!DateOfDeath@{DateOfDeath}}
+\index{DateOfDeath@{DateOfDeath}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{DateOfDeath}{DateOfDeath}}
+{\footnotesize\ttfamily Date\+Time? AVAVLib.\+Person\+Data.\+Date\+Of\+Death = null\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Todestage -\/-\/\texorpdfstring{$>$}{>} Ist Nullable, d.\+h. Is\+Alive oder Kenner für Verstorben sollten immer aus diesem Datum abgeleitet werden. 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a988d8543f5f6c26150141fb548e81a3e}\label{class_a_v_a_v_lib_1_1_person_data_a988d8543f5f6c26150141fb548e81a3e}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!DebitNummer@{DebitNummer}}
+\index{DebitNummer@{DebitNummer}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{DebitNummer}{DebitNummer}}
+{\footnotesize\ttfamily long? AVAVLib.\+Person\+Data.\+Debit\+Nummer\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Debitorennummer -- sollten wir eigentlich rauswerfen und nur noch die AVID verwenden. 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a84b2ac01aae1c993d29beda876e987bf}\label{class_a_v_a_v_lib_1_1_person_data_a84b2ac01aae1c993d29beda876e987bf}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!DisplayInternal@{DisplayInternal}}
+\index{DisplayInternal@{DisplayInternal}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{DisplayInternal}{DisplayInternal}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Display\+Internal\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Sample Code -\/ Interner Anzeigename der \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a3d2caed3bdfd12a342c6dd048fb1ec6a}\label{class_a_v_a_v_lib_1_1_person_data_a3d2caed3bdfd12a342c6dd048fb1ec6a}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!DisplayInternalWithEMails@{DisplayInternalWithEMails}}
+\index{DisplayInternalWithEMails@{DisplayInternalWithEMails}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{DisplayInternalWithEMails}{DisplayInternalWithEMails}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Display\+Internal\+With\+EMails\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Sample Code -\/ Interner Anzeigename der \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} mit EMails 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_abd1661b9ced50056e65aa83a8b12a44f}\label{class_a_v_a_v_lib_1_1_person_data_abd1661b9ced50056e65aa83a8b12a44f}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!DisplayName@{DisplayName}}
+\index{DisplayName@{DisplayName}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{DisplayName}{DisplayName}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Display\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Sample Code -\/ Vollständiger Name der \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_ad3122ad946df14162e2fa3646726ac6c}\label{class_a_v_a_v_lib_1_1_person_data_ad3122ad946df14162e2fa3646726ac6c}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!DisplayShortName@{DisplayShortName}}
+\index{DisplayShortName@{DisplayShortName}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{DisplayShortName}{DisplayShortName}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Display\+Short\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Sample Code -\/ Kurzer Name der \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} zur Anzeige 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a26234e5f5023967b7db8e6912118c0e3}\label{class_a_v_a_v_lib_1_1_person_data_a26234e5f5023967b7db8e6912118c0e3}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!EMailOfficial@{EMailOfficial}}
+\index{EMailOfficial@{EMailOfficial}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{EMailOfficial}{EMailOfficial}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+EMail\+Official\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Offizielle EMail-\/\+Address, z.\+B. zur Verwendung bei Einladungen zur MV 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a27c535ecffd10fb33f1e3c6f3198cd24}\label{class_a_v_a_v_lib_1_1_person_data_a27c535ecffd10fb33f1e3c6f3198cd24}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!EMails@{EMails}}
+\index{EMails@{EMails}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{EMails}{EMails}}
+{\footnotesize\ttfamily IEnumerable$<$string$>$ AVAVLib.\+Person\+Data.\+EMails\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Sample Code, ermittelt die EMail-\/\+Addressen als Liste. 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a6e7cfdf0dc402e0f4fa75c1b6b7835c5}\label{class_a_v_a_v_lib_1_1_person_data_a6e7cfdf0dc402e0f4fa75c1b6b7835c5}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!EMailStuff@{EMailStuff}}
+\index{EMailStuff@{EMailStuff}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{EMailStuff}{EMailStuff}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+EMail\+Stuff\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+EMail-\/\+Adresse für Verteiler. 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a9f2c4a15818df336795ce897655c4291}\label{class_a_v_a_v_lib_1_1_person_data_a9f2c4a15818df336795ce897655c4291}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!Gender@{Gender}}
+\index{Gender@{Gender}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{Gender}{Gender}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245}{Gender}} AVAVLib.\+Person\+Data.\+Gender\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Geschlechtliche Identität 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a9d57cacc0a92cb099b8c513b410ea6d0}\label{class_a_v_a_v_lib_1_1_person_data_a9d57cacc0a92cb099b8c513b410ea6d0}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!GivenName@{GivenName}}
+\index{GivenName@{GivenName}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{GivenName}{GivenName}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Given\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Erster Vorname 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a53416e223ac112eefd172ea5a83de2bb}\label{class_a_v_a_v_lib_1_1_person_data_a53416e223ac112eefd172ea5a83de2bb}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!GivenNamePrefix@{GivenNamePrefix}}
+\index{GivenNamePrefix@{GivenNamePrefix}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{GivenNamePrefix}{GivenNamePrefix}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Given\+Name\+Prefix\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Präfix für einen Vornamen, z.\+B. De Witt, würde nach Witt einsortiert, weil De ein Präfix ist. 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_aba3f74aa1260a3c717b36f1e400b47f8}\label{class_a_v_a_v_lib_1_1_person_data_aba3f74aa1260a3c717b36f1e400b47f8}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!IsAvColonyVisible@{IsAvColonyVisible}}
+\index{IsAvColonyVisible@{IsAvColonyVisible}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{IsAvColonyVisible}{IsAvColonyVisible}}
+{\footnotesize\ttfamily bool? AVAVLib.\+Person\+Data.\+Is\+Av\+Colony\+Visible\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sollen alle Bundesgeschwister meine AV-\/\+Kolonie sehen? 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a017acd9f2bb801aa8e5f7ef7ac3c0f0c}\label{class_a_v_a_v_lib_1_1_person_data_a017acd9f2bb801aa8e5f7ef7ac3c0f0c}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!IsBirthdayVisible@{IsBirthdayVisible}}
+\index{IsBirthdayVisible@{IsBirthdayVisible}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{IsBirthdayVisible}{IsBirthdayVisible}}
+{\footnotesize\ttfamily bool AVAVLib.\+Person\+Data.\+Is\+Birthday\+Visible = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sollen alle Bundesgeschwister meinen Geburtstag sehen? 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_afb80327ccbe5b36521e46358b75bff3f}\label{class_a_v_a_v_lib_1_1_person_data_afb80327ccbe5b36521e46358b75bff3f}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!IsBirthPlaceVisible@{IsBirthPlaceVisible}}
+\index{IsBirthPlaceVisible@{IsBirthPlaceVisible}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{IsBirthPlaceVisible}{IsBirthPlaceVisible}}
+{\footnotesize\ttfamily bool? AVAVLib.\+Person\+Data.\+Is\+Birth\+Place\+Visible\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sollen alle Bundesgeschwister meinen Geburtsort sehen können? 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a0985e47817a33be50b6d4d5ea7466860}\label{class_a_v_a_v_lib_1_1_person_data_a0985e47817a33be50b6d4d5ea7466860}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!IsEMailOfficialVisible@{IsEMailOfficialVisible}}
+\index{IsEMailOfficialVisible@{IsEMailOfficialVisible}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{IsEMailOfficialVisible}{IsEMailOfficialVisible}}
+{\footnotesize\ttfamily bool? AVAVLib.\+Person\+Data.\+Is\+EMail\+Official\+Visible\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sollen alle Bundesgeschwister die offizielle EMail-\/\+Addresse sehen? 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a7a6459adc0002ab7c31e80fae3bb85fd}\label{class_a_v_a_v_lib_1_1_person_data_a7a6459adc0002ab7c31e80fae3bb85fd}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!IsEMailStuffVisible@{IsEMailStuffVisible}}
+\index{IsEMailStuffVisible@{IsEMailStuffVisible}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{IsEMailStuffVisible}{IsEMailStuffVisible}}
+{\footnotesize\ttfamily bool? AVAVLib.\+Person\+Data.\+Is\+EMail\+Stuff\+Visible\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sollen alle Bundesgeschwister die zusätzliche EMail-\/\+Addresse sehen? 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a690ddc7ecbdcc9b9e39f11d8033a6d86}\label{class_a_v_a_v_lib_1_1_person_data_a690ddc7ecbdcc9b9e39f11d8033a6d86}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!IsMobilTelAdd1Visible@{IsMobilTelAdd1Visible}}
+\index{IsMobilTelAdd1Visible@{IsMobilTelAdd1Visible}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{IsMobilTelAdd1Visible}{IsMobilTelAdd1Visible}}
+{\footnotesize\ttfamily bool AVAVLib.\+Person\+Data.\+Is\+Mobil\+Tel\+Add1\+Visible = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sollen alle Bundesgeschwister meine 1. zusätzliche Mobil-\/\+Telefonummer sehen? 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_ae4fbafc41a1890b3cebd275b943622a3}\label{class_a_v_a_v_lib_1_1_person_data_ae4fbafc41a1890b3cebd275b943622a3}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!IsMobilTelAdd2Visible@{IsMobilTelAdd2Visible}}
+\index{IsMobilTelAdd2Visible@{IsMobilTelAdd2Visible}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{IsMobilTelAdd2Visible}{IsMobilTelAdd2Visible}}
+{\footnotesize\ttfamily bool AVAVLib.\+Person\+Data.\+Is\+Mobil\+Tel\+Add2\+Visible = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sollen alle Bundesgeschwister meine 2. zusätzliche Mobil-\/\+Telefonummer sehen? 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_ae5b0c29ea29f4ef3aee9dc98ac95acbf}\label{class_a_v_a_v_lib_1_1_person_data_ae5b0c29ea29f4ef3aee9dc98ac95acbf}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!IsMobilTelOffcialVisible@{IsMobilTelOffcialVisible}}
+\index{IsMobilTelOffcialVisible@{IsMobilTelOffcialVisible}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{IsMobilTelOffcialVisible}{IsMobilTelOffcialVisible}}
+{\footnotesize\ttfamily bool AVAVLib.\+Person\+Data.\+Is\+Mobil\+Tel\+Offcial\+Visible = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sollen alle Bundesgeschwister meine offizielle Mobil-\/\+Telefonummer sehen? 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a286e7f780b12a42e529034197ea11837}\label{class_a_v_a_v_lib_1_1_person_data_a286e7f780b12a42e529034197ea11837}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!IsWebSiteVisible@{IsWebSiteVisible}}
+\index{IsWebSiteVisible@{IsWebSiteVisible}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{IsWebSiteVisible}{IsWebSiteVisible}}
+{\footnotesize\ttfamily bool AVAVLib.\+Person\+Data.\+Is\+Web\+Site\+Visible = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sollen alle Bundesgeschwister meine web-\/\+Site sehen? 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_aa50ba329b6149d73c2c315383080a6d0}\label{class_a_v_a_v_lib_1_1_person_data_aa50ba329b6149d73c2c315383080a6d0}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!MaidenName@{MaidenName}}
+\index{MaidenName@{MaidenName}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{MaidenName}{MaidenName}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Maiden\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Geburtsname 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_abbe29e85160f2d04e964652ac576d271}\label{class_a_v_a_v_lib_1_1_person_data_abbe29e85160f2d04e964652ac576d271}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!MobilTelAdd1@{MobilTelAdd1}}
+\index{MobilTelAdd1@{MobilTelAdd1}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{MobilTelAdd1}{MobilTelAdd1}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Mobil\+Tel\+Add1\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+
+\begin{DoxyEnumerate}
+\item zusätzliche Mobilfunknummer 
+\end{DoxyEnumerate}\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a93798cebf2cebaa60181022c113ebefa}\label{class_a_v_a_v_lib_1_1_person_data_a93798cebf2cebaa60181022c113ebefa}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!MobilTelAdd2@{MobilTelAdd2}}
+\index{MobilTelAdd2@{MobilTelAdd2}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{MobilTelAdd2}{MobilTelAdd2}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Mobil\+Tel\+Add2\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+
+\begin{DoxyEnumerate}
+\item zusätzliche Mobilfunknummer 
+\end{DoxyEnumerate}\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a1d960fd59fca82355e19ef1933bc5902}\label{class_a_v_a_v_lib_1_1_person_data_a1d960fd59fca82355e19ef1933bc5902}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!MobilTelOfficial@{MobilTelOfficial}}
+\index{MobilTelOfficial@{MobilTelOfficial}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{MobilTelOfficial}{MobilTelOfficial}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Mobil\+Tel\+Official\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Offzielle Mobil-\/\+Telefonnummer 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a5376922f685d30a29f9f3eb87c135b35}\label{class_a_v_a_v_lib_1_1_person_data_a5376922f685d30a29f9f3eb87c135b35}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!Name@{Name}}
+\index{Name@{Name}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Familienname 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_ae127e6f6a3db1048788fab45a54c217c}\label{class_a_v_a_v_lib_1_1_person_data_ae127e6f6a3db1048788fab45a54c217c}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!NamePrefix@{NamePrefix}}
+\index{NamePrefix@{NamePrefix}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{NamePrefix}{NamePrefix}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Name\+Prefix\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Präfix zum Familiennamen, z.\+B. von -\/-\/\texorpdfstring{$>$}{>} Sortierung 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_adb753257e2423909ae1b7449e754b291}\label{class_a_v_a_v_lib_1_1_person_data_adb753257e2423909ae1b7449e754b291}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!NameSuffix@{NameSuffix}}
+\index{NameSuffix@{NameSuffix}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{NameSuffix}{NameSuffix}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Name\+Suffix\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Anhang zum Familiennamen, z.\+B. sen., jun., III. 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a0f90446a1d91418037322efdaad57a99}\label{class_a_v_a_v_lib_1_1_person_data_a0f90446a1d91418037322efdaad57a99}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!Nickname@{Nickname}}
+\index{Nickname@{Nickname}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{Nickname}{Nickname}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Nickname = null\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Biername 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a4116a54da2ad5174b213447d93deb178}\label{class_a_v_a_v_lib_1_1_person_data_a4116a54da2ad5174b213447d93deb178}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!Person@{Person}}
+\index{Person@{Person}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{Person}{Person}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} AVAVLib.\+Person\+Data.\+Person\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+\mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} zu der die Datensatzversion gehört 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_addd6bf4cd5cb1fa5e6a66480ba0e645a}\label{class_a_v_a_v_lib_1_1_person_data_addd6bf4cd5cb1fa5e6a66480ba0e645a}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!PrefixTitle@{PrefixTitle}}
+\index{PrefixTitle@{PrefixTitle}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{PrefixTitle}{PrefixTitle}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Prefix\+Title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Akademische Grade, die vor den Namen gestellt werden. 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a86d7ff5beec867fc26380229946d1c6a}\label{class_a_v_a_v_lib_1_1_person_data_a86d7ff5beec867fc26380229946d1c6a}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!StaatsexamenProfession@{StaatsexamenProfession}}
+\index{StaatsexamenProfession@{StaatsexamenProfession}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{StaatsexamenProfession}{StaatsexamenProfession}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Staatsexamen\+Profession\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Staatsexamen oder sonstige Berufsabschlüsse. Die Lehrer legen da Wert drauf, denn die bekommen kein Diplom und sind dann irgendwann Studienrat oder so was. 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_af40463d48f03dbcf4855f23781cc9ce3}\label{class_a_v_a_v_lib_1_1_person_data_af40463d48f03dbcf4855f23781cc9ce3}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!SuffixTitle@{SuffixTitle}}
+\index{SuffixTitle@{SuffixTitle}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{SuffixTitle}{SuffixTitle}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Suffix\+Title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Akademische Grade, die hinter den Namen gestellt werden. 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a11521b83833a0eb0a38194f10089fe01}\label{class_a_v_a_v_lib_1_1_person_data_a11521b83833a0eb0a38194f10089fe01}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!TimeStamp@{TimeStamp}}
+\index{TimeStamp@{TimeStamp}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{TimeStamp}{TimeStamp}}
+{\footnotesize\ttfamily Date\+Time AVAVLib.\+Person\+Data.\+Time\+Stamp = Date\+Time.\+Now\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Zeitpunkt der Erstellung 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a195c4ea7e3a39aac578834c582896d72}\label{class_a_v_a_v_lib_1_1_person_data_a195c4ea7e3a39aac578834c582896d72}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!Valid@{Valid}}
+\index{Valid@{Valid}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{Valid}{Valid}}
+{\footnotesize\ttfamily bool AVAVLib.\+Person\+Data.\+Valid\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Zeigt an, ob der Datensatz schwebt oder schon von einem Schriftwart übernommen wurde. 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_person_data_a18c50adee146d3edce84f6ec46af6e97}\label{class_a_v_a_v_lib_1_1_person_data_a18c50adee146d3edce84f6ec46af6e97}} 
+\index{AVAVLib.PersonData@{AVAVLib.PersonData}!WebSite@{WebSite}}
+\index{WebSite@{WebSite}!AVAVLib.PersonData@{AVAVLib.PersonData}}
+\doxysubsubsection{\texorpdfstring{WebSite}{WebSite}}
+{\footnotesize\ttfamily string AVAVLib.\+Person\+Data.\+Web\+Site\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Web-\/\+Site 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/dev/svn/i2cm/prj/\+AV/\+AVAV/avav/\+AVAVLib/\mbox{\hyperlink{_person_data_8cs}{Person\+Data.\+cs}}\item 
+F\+:/dev/svn/i2cm/prj/\+AV/\+AVAV/avav/\+AVAVLib/\mbox{\hyperlink{_person_data_flex_8cs}{Person\+Data\+Flex.\+cs}}\end{DoxyCompactItemize}

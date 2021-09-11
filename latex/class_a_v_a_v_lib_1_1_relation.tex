@@ -1,0 +1,99 @@
+\hypertarget{class_a_v_a_v_lib_1_1_relation}{}\doxysection{AVAVLib.\+Relation Class Reference}
+\label{class_a_v_a_v_lib_1_1_relation}\index{AVAVLib.Relation@{AVAVLib.Relation}}
+
+
+\mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} zu \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} \mbox{\hyperlink{class_a_v_a_v_lib_1_1_relation}{Relation}} mit Gültigkeit  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} \mbox{\hyperlink{class_a_v_a_v_lib_1_1_relation_a9375be59bb85ad51ff213b709d3e5188}{From}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ausgangpunkt \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} \mbox{\hyperlink{class_a_v_a_v_lib_1_1_relation_a53ce8e9ee00e8672bde53133463de86d}{To}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Zielpunkt \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{class_a_v_a_v_lib_1_1_relation_a2aa3d8698a01c2acefa5c0496eb69b95}{Time\+Stamp}} = Date\+Time.\+Now\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Time\+Stamp mit der Systemzeit zum Erstellungszeitpunkt. \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{class_a_v_a_v_lib_1_1_relation_a0e8ca2ed7fe5bc3be977dc604a69b2fb}{Valid\+From}} = Date\+Time.\+Min\+Value\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gültig von \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{class_a_v_a_v_lib_1_1_relation_a742e78678491d31666a64356c7b28349}{Valid\+Till}} = Date\+Time.\+Max\+Value\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gültig bis \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_a_v_a_v_lib_1_1_change_handle}{Change\+Handle}} \mbox{\hyperlink{class_a_v_a_v_lib_1_1_relation_a91af6665a0861498a9fd2f00eb54929e}{Change\+Handle}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Änderungsbeschreibung für genau diese Änderung. (Jede Änderung ist ein Datensatz.) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} zu \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} \mbox{\hyperlink{class_a_v_a_v_lib_1_1_relation}{Relation}} mit Gültigkeit 
+
+Für die Serialisierung eindeutig über From.\+AVID und To.\+AVID beschreibbar.
+
+Gültig ist immer nur der Jüngste Datensatz.
+
+Inkonsistenzen sollte nur der zeitversetzte Validator prüfen. z.\+B. Geschwister in beide Richungen Enkel und Großelter jeweils in entgegensetzter Richtung. 
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_relation_a91af6665a0861498a9fd2f00eb54929e}\label{class_a_v_a_v_lib_1_1_relation_a91af6665a0861498a9fd2f00eb54929e}} 
+\index{AVAVLib.Relation@{AVAVLib.Relation}!ChangeHandle@{ChangeHandle}}
+\index{ChangeHandle@{ChangeHandle}!AVAVLib.Relation@{AVAVLib.Relation}}
+\doxysubsubsection{\texorpdfstring{ChangeHandle}{ChangeHandle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_v_a_v_lib_1_1_change_handle}{Change\+Handle}} AVAVLib.\+Relation.\+Change\+Handle\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Änderungsbeschreibung für genau diese Änderung. (Jede Änderung ist ein Datensatz.) 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_relation_a9375be59bb85ad51ff213b709d3e5188}\label{class_a_v_a_v_lib_1_1_relation_a9375be59bb85ad51ff213b709d3e5188}} 
+\index{AVAVLib.Relation@{AVAVLib.Relation}!From@{From}}
+\index{From@{From}!AVAVLib.Relation@{AVAVLib.Relation}}
+\doxysubsubsection{\texorpdfstring{From}{From}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} AVAVLib.\+Relation.\+From\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Ausgangpunkt 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_relation_a2aa3d8698a01c2acefa5c0496eb69b95}\label{class_a_v_a_v_lib_1_1_relation_a2aa3d8698a01c2acefa5c0496eb69b95}} 
+\index{AVAVLib.Relation@{AVAVLib.Relation}!TimeStamp@{TimeStamp}}
+\index{TimeStamp@{TimeStamp}!AVAVLib.Relation@{AVAVLib.Relation}}
+\doxysubsubsection{\texorpdfstring{TimeStamp}{TimeStamp}}
+{\footnotesize\ttfamily Date\+Time AVAVLib.\+Relation.\+Time\+Stamp = Date\+Time.\+Now\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Time\+Stamp mit der Systemzeit zum Erstellungszeitpunkt. 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_relation_a53ce8e9ee00e8672bde53133463de86d}\label{class_a_v_a_v_lib_1_1_relation_a53ce8e9ee00e8672bde53133463de86d}} 
+\index{AVAVLib.Relation@{AVAVLib.Relation}!To@{To}}
+\index{To@{To}!AVAVLib.Relation@{AVAVLib.Relation}}
+\doxysubsubsection{\texorpdfstring{To}{To}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} AVAVLib.\+Relation.\+To\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Zielpunkt 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_relation_a0e8ca2ed7fe5bc3be977dc604a69b2fb}\label{class_a_v_a_v_lib_1_1_relation_a0e8ca2ed7fe5bc3be977dc604a69b2fb}} 
+\index{AVAVLib.Relation@{AVAVLib.Relation}!ValidFrom@{ValidFrom}}
+\index{ValidFrom@{ValidFrom}!AVAVLib.Relation@{AVAVLib.Relation}}
+\doxysubsubsection{\texorpdfstring{ValidFrom}{ValidFrom}}
+{\footnotesize\ttfamily Date\+Time AVAVLib.\+Relation.\+Valid\+From = Date\+Time.\+Min\+Value\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gültig von 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_relation_a742e78678491d31666a64356c7b28349}\label{class_a_v_a_v_lib_1_1_relation_a742e78678491d31666a64356c7b28349}} 
+\index{AVAVLib.Relation@{AVAVLib.Relation}!ValidTill@{ValidTill}}
+\index{ValidTill@{ValidTill}!AVAVLib.Relation@{AVAVLib.Relation}}
+\doxysubsubsection{\texorpdfstring{ValidTill}{ValidTill}}
+{\footnotesize\ttfamily Date\+Time AVAVLib.\+Relation.\+Valid\+Till = Date\+Time.\+Max\+Value\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gültig bis 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/dev/svn/i2cm/prj/\+AV/\+AVAV/avav/\+AVAVLib/\mbox{\hyperlink{_relation_8cs}{Relation.\+cs}}\end{DoxyCompactItemize}

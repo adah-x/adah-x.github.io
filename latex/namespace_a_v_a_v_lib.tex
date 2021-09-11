@@ -1,0 +1,406 @@
+\hypertarget{namespace_a_v_a_v_lib}{}\doxysection{AVAVLib Namespace Reference}
+\label{namespace_a_v_a_v_lib}\index{AVAVLib@{AVAVLib}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_a_v_a_v_lib_1_1_address}{Address}}
+\begin{DoxyCompactList}\small\item\em Addresse hat ähnlich zur \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} eine eigene Identität, denn bei Korrekturen sollen alle Verwendungen einer Addresse korrigiert werden. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_a_v_a_v_lib_1_1_address_validity}{Address\+Validity}}
+\begin{DoxyCompactList}\small\item\em Gültigkeit und Zweck einer Adresse, zur Serialisierung eindeutig über \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_a4c56b99222ad79ddd2eb502252ed4426}{Person.\+Avid}} und \mbox{\hyperlink{class_a_v_a_v_lib_1_1_address_acba6a06ad24551192824328c283cff82}{Address.\+Adid}} zu identifizieren. Für jede Kombination aus \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_a4c56b99222ad79ddd2eb502252ed4426}{Person.\+Avid}} und \mbox{\hyperlink{class_a_v_a_v_lib_1_1_address_acba6a06ad24551192824328c283cff82}{Address.\+Adid}} ist stets nur die jüngest nicht schwebende gültig. Jede Änderung erzeugt einen neuen Datensatz. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_a_v_a_v_lib_1_1_address_version}{Address\+Version}}
+\begin{DoxyCompactList}\small\item\em Version einer Addresse \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_a_v_a_v_lib_1_1_change_handle}{Change\+Handle}}
+\begin{DoxyCompactList}\small\item\em Im \mbox{\hyperlink{class_a_v_a_v_lib_1_1_change_handle}{Change\+Handle}} speichern wir die Informationen, die der Schriftwart zum Grund der Änderung erfasst hat. \end{DoxyCompactList}\item 
+class {\bfseries Extensions}
+\begin{DoxyCompactList}\small\item\em Ein paar Helferlein um String einfacher zusammenzustöpseln \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_a_v_a_v_lib_1_1_image}{Image}}
+\begin{DoxyCompactList}\small\item\em Bild, enthält nur die Metadaten und einen Handle für den Store das einfachste sicher hier nur den relativen Pfand reinzuhängen, z.\+B. in der Form /\+AVID/\+Image1.jpg \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} sind im Sinne der AVAV alle bekannten Personen, also auch Stu\+Gis, Ehepartner, Fördermitglieder etc. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person_data}{Person\+Data}}
+\begin{DoxyCompactList}\small\item\em Version eines Datensatzes zu einer \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}}, bei Änderungen werden immer neue Versionen erstellt, der laut Zeitstempel letzte gültige (valid) Datensatz ist der aktuelle Stand. Mitglieder können schwebende Datensätze anlegen, bei diesen ist dann valid=false \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_a_v_a_v_lib_1_1_relation}{Relation}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} zu \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} \mbox{\hyperlink{class_a_v_a_v_lib_1_1_relation}{Relation}} mit Gültigkeit \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status}{Status}}
+\begin{DoxyCompactList}\small\item\em Für die vielen verschiedenen \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status}{Status}}, die eine \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} im AV haben kann, wir ein persönlicher Trail geschrieben, jede Statusänderung ist dabei eine Datensatz, so können als Zustände (z.\+B. ist Bundesgeschwister, ist AH, ist Ju\+Mi) aus der geordneten Liste der Statusübergänge abgeleitet werden. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9d}{Address\+Validity\+Type}} \{ \newline
+\mbox{\hyperlink{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9da8cf04a9734132302f96da8e113e80ce5}{Home}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9daa02c83a7dbd96295beaefb72c2bee2de}{Main}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9da6311ae17c1ee52b36e68aaf4ad066387}{Other}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9da96e430e692feffefb0f0c1ca3e57c1a9}{Employer}}
+, \newline
+\mbox{\hyperlink{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9da10d85d7664a911bcaec89732098c269a}{Temporary}}
+ \}
+\begin{DoxyCompactList}\small\item\em Art der Adresse oder Arbeitgebers \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_a_v_a_v_lib_a5d649d755fea6060a7d34e5d03f21e4b}{Authority}} \{ \mbox{\hyperlink{namespace_a_v_a_v_lib_a5d649d755fea6060a7d34e5d03f21e4ba43e1eaf7eb52ff9580a99c974cdc5026}{Aktivitas}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a5d649d755fea6060a7d34e5d03f21e4ba386283eb1e9d732ee3a8e5710e128f76}{Adah}}
+ \}
+\begin{DoxyCompactList}\small\item\em Mögliche Zuständigkeiten bei der Verwaltung \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245}{Gender}} \{ \newline
+\mbox{\hyperlink{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245a63889cfb9d3cbe05d1bd2be5cc9953fd}{Male}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245ab719ce180ec7bd9641fece2f920f4817}{Female}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245ae67561dfc51195ce1ac515406291900e}{Diverse}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245ab2a08319d780b24b0f694c89e549a51f}{Not\+Given}}
+, \newline
+\mbox{\hyperlink{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245a88183b946cc5f0e8c96b2e66e1c74a7e}{Unknown}}
+ \}
+\begin{DoxyCompactList}\small\item\em Mögliche Geschlechter entsprechend der aktuellen Empfehlung \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518}{Relation\+Type}} \{ \newline
+\mbox{\hyperlink{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518aba3f6a5526b54675d54123702760ddf2}{Sibling}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518a30269022e9d8f51beaabb52e5d0de2b7}{Parent}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518aa82fea383f121c803741f8de1c209734}{Child}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518ac70bb38a690b4ec42041b217a4772304}{Grand\+Parent}}
+, \newline
+\mbox{\hyperlink{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518a050786a69999d47883b9683597dd1e93}{Grand\+Child}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518a6f041af43be87a195bd3f075922f344a}{Partner}}
+ \}
+\begin{DoxyCompactList}\small\item\em Bezieungen zwischen Personen \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_a_v_a_v_lib_a23ba7e347aedebae84073dfef7e9d5ec}{Status\+Change\+Type}} \{ \mbox{\hyperlink{namespace_a_v_a_v_lib_a23ba7e347aedebae84073dfef7e9d5ecaa6122a65eaa676f700ae68d393054a37}{Start}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a23ba7e347aedebae84073dfef7e9d5eca87557f11575c0ad78e4e28abedc13b6e}{End}}
+ \}
+\begin{DoxyCompactList}\small\item\em Richtungsanzeige für eine Statusänderung, Beginnt der Status mit dem Eintrag (z.\+B. Eintritt) oder endet dieser (z.\+B. Übertritt in ADAHschaft) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8}{Status\+Type}} \{ \newline
+\mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a8288f09465e8fa76c95bf9c6e8fa1fa1}{Field\+Of\+Study}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a21ce478f23d2ccd55d9086be9b80b9bc}{Member\+Verkehrsgast}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a67d80ab314cb77e3f23b262794b93737}{Member\+Young}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a4d2fca0803a47c5e9330951b10712dd3}{Member\+Aktivitas}}
+, \newline
+\mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a6f65b8905d824270792ccfe495afd3af}{Member\+Av\+Student}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8aae62822314421fb27004eb44d24213b8}{Member\+Av\+Full}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a58e27794731d0175c1283a553c60f1f3}{Member\+Hg\+Student}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ae5b6737d5ae5bfd60d2745a5895828ab}{Member\+Hg\+Full}}
+, \newline
+\mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ab5e6dabcba3fe5d08a626c47543712cd}{Member\+Hg\+Shares}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a678a39a53af7ff653e3ded982472d702}{Member\+Hg\+Sustaining}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ac07b0e674889d5585d7e16876d61291c}{Member\+Gav}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a76e9e5c9df41cc3ec75e6db3d62ff22e}{Member\+Honorary}}
+, \newline
+\mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ac7f21790b7db2c29d5750cd95cc92e70}{Stu\+Gi}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a00b9c69e369aec68c4390465c36dae64}{Active1X}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a36ddab5c5aed1516db84ff16dd2f50e4}{Acitve2X}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a7c5a942980cdae7a6bba47b05c6cd430}{Active3X}}
+, \newline
+\mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8afe65f8db6ee22bccb5bd18ec838e29cb}{Active\+Kw}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a8d9734327a777af993298665d21b5617}{Adah1X}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ae878621cec5687c46bfb4373be62be30}{Adah2X}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a178a1c78b9ebe249eb0e8e84ae708677}{Adah\+Sw}}
+, \newline
+\mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a9481c74ff18b0d9eeea5f8c539945e5d}{Adah\+Kw}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a12ded0a686882b454735884d1a88a904}{Adah\+Assoc}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ae1f3acb567fbcd7798a286ab28b1bf1b}{Chronicler}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a386283eb1e9d732ee3a8e5710e128f76}{Adah}}
+, \newline
+\mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a85ca97e2fe37a22fe79fb47c623e3508}{Hg1X}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a592ee7792e8b590443dc79206dd3cc15}{Hg2X}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a2a34f783dcec58e50ce48b7d99f3c82d}{Hg\+Kw}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8abfe170a6937954a191d8f23de4c5c36f}{Hg\+Stud}}
+, \newline
+\mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8aaef14624da4dc37dfe8fb0b58891e015}{Hg\+Assoc}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a9b6dbd801ea6ff0eb3bdb43733e36767}{Gav1X}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a6e1e7ae089d482ff8d35d24114224fc3}{Gav\+Hw}}
+, \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a117c496cff3afa637a1fbab21f761e47}{Gav\+Kw}}
+, \newline
+\mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8af4c477cc8486b24b08ffdb2f5ce60201}{Gav\+Assoc}}
+ \}
+\begin{DoxyCompactList}\small\item\em Mögliche Statusänderungen im AV \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9d}\label{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9d}} 
+\index{AVAVLib@{AVAVLib}!AddressValidityType@{AddressValidityType}}
+\index{AddressValidityType@{AddressValidityType}!AVAVLib@{AVAVLib}}
+\doxysubsubsection{\texorpdfstring{AddressValidityType}{AddressValidityType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9d}{AVAVLib.\+Address\+Validity\+Type}}}
+
+
+
+Art der Adresse oder Arbeitgebers 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Home@{Home}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Home@{Home}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9da8cf04a9734132302f96da8e113e80ce5}\label{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9da8cf04a9734132302f96da8e113e80ce5}} 
+Home&Addresse der Eltern während des Studiums \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Main@{Main}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Main@{Main}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9daa02c83a7dbd96295beaefb72c2bee2de}\label{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9daa02c83a7dbd96295beaefb72c2bee2de}} 
+Main&Hauptwohnsitz \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Other@{Other}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Other@{Other}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9da6311ae17c1ee52b36e68aaf4ad066387}\label{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9da6311ae17c1ee52b36e68aaf4ad066387}} 
+Other&Nebenwohnsitz \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Employer@{Employer}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Employer@{Employer}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9da96e430e692feffefb0f0c1ca3e57c1a9}\label{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9da96e430e692feffefb0f0c1ca3e57c1a9}} 
+Employer&Arbeitgeber \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Temporary@{Temporary}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Temporary@{Temporary}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9da10d85d7664a911bcaec89732098c269a}\label{namespace_a_v_a_v_lib_ab069243b2d82840182e1ad752c823f9da10d85d7664a911bcaec89732098c269a}} 
+Temporary&Zeitlich begrenzt \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_a_v_a_v_lib_a5d649d755fea6060a7d34e5d03f21e4b}\label{namespace_a_v_a_v_lib_a5d649d755fea6060a7d34e5d03f21e4b}} 
+\index{AVAVLib@{AVAVLib}!Authority@{Authority}}
+\index{Authority@{Authority}!AVAVLib@{AVAVLib}}
+\doxysubsubsection{\texorpdfstring{Authority}{Authority}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_a_v_a_v_lib_a5d649d755fea6060a7d34e5d03f21e4b}{AVAVLib.\+Authority}}}
+
+
+
+Mögliche Zuständigkeiten bei der Verwaltung 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Aktivitas@{Aktivitas}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Aktivitas@{Aktivitas}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a5d649d755fea6060a7d34e5d03f21e4ba43e1eaf7eb52ff9580a99c974cdc5026}\label{namespace_a_v_a_v_lib_a5d649d755fea6060a7d34e5d03f21e4ba43e1eaf7eb52ff9580a99c974cdc5026}} 
+Aktivitas&Zuständigkeit Aktivitas \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Adah@{Adah}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Adah@{Adah}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a5d649d755fea6060a7d34e5d03f21e4ba386283eb1e9d732ee3a8e5710e128f76}\label{namespace_a_v_a_v_lib_a5d649d755fea6060a7d34e5d03f21e4ba386283eb1e9d732ee3a8e5710e128f76}} 
+Adah&Zuständigkeit ADAHschaft \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245}\label{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245}} 
+\index{AVAVLib@{AVAVLib}!Gender@{Gender}}
+\index{Gender@{Gender}!AVAVLib@{AVAVLib}}
+\doxysubsubsection{\texorpdfstring{Gender}{Gender}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245}{AVAVLib.\+Gender}}}
+
+
+
+Mögliche Geschlechter entsprechend der aktuellen Empfehlung 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Male@{Male}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Male@{Male}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245a63889cfb9d3cbe05d1bd2be5cc9953fd}\label{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245a63889cfb9d3cbe05d1bd2be5cc9953fd}} 
+Male&Männlich \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Female@{Female}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Female@{Female}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245ab719ce180ec7bd9641fece2f920f4817}\label{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245ab719ce180ec7bd9641fece2f920f4817}} 
+Female&Weiblich \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Diverse@{Diverse}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Diverse@{Diverse}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245ae67561dfc51195ce1ac515406291900e}\label{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245ae67561dfc51195ce1ac515406291900e}} 
+Diverse&Zu einem anderen Geschlecht gehörend. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotGiven@{NotGiven}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!NotGiven@{NotGiven}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245ab2a08319d780b24b0f694c89e549a51f}\label{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245ab2a08319d780b24b0f694c89e549a51f}} 
+Not\+Given&Möchte keine Angaben bezüglich einer Geschlechterzuordnung machen. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unknown@{Unknown}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Unknown@{Unknown}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245a88183b946cc5f0e8c96b2e66e1c74a7e}\label{namespace_a_v_a_v_lib_ae08f92babdd4dcca521967908c94f245a88183b946cc5f0e8c96b2e66e1c74a7e}} 
+Unknown&Das Geschlecht ist unbekannt. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518}\label{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518}} 
+\index{AVAVLib@{AVAVLib}!RelationType@{RelationType}}
+\index{RelationType@{RelationType}!AVAVLib@{AVAVLib}}
+\doxysubsubsection{\texorpdfstring{RelationType}{RelationType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518}{AVAVLib.\+Relation\+Type}}}
+
+
+
+Bezieungen zwischen Personen 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sibling@{Sibling}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Sibling@{Sibling}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518aba3f6a5526b54675d54123702760ddf2}\label{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518aba3f6a5526b54675d54123702760ddf2}} 
+Sibling&Geschwister \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Parent@{Parent}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Parent@{Parent}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518a30269022e9d8f51beaabb52e5d0de2b7}\label{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518a30269022e9d8f51beaabb52e5d0de2b7}} 
+Parent&Elternteil \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Child@{Child}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Child@{Child}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518aa82fea383f121c803741f8de1c209734}\label{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518aa82fea383f121c803741f8de1c209734}} 
+Child&Kind \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GrandParent@{GrandParent}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!GrandParent@{GrandParent}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518ac70bb38a690b4ec42041b217a4772304}\label{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518ac70bb38a690b4ec42041b217a4772304}} 
+Grand\+Parent&Großelternteil \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GrandChild@{GrandChild}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!GrandChild@{GrandChild}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518a050786a69999d47883b9683597dd1e93}\label{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518a050786a69999d47883b9683597dd1e93}} 
+Grand\+Child&Enkelkind \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Partner@{Partner}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Partner@{Partner}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518a6f041af43be87a195bd3f075922f344a}\label{namespace_a_v_a_v_lib_ae13ead293adab03e98cd17d08500f518a6f041af43be87a195bd3f075922f344a}} 
+Partner&Lebenspartner \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_a_v_a_v_lib_a23ba7e347aedebae84073dfef7e9d5ec}\label{namespace_a_v_a_v_lib_a23ba7e347aedebae84073dfef7e9d5ec}} 
+\index{AVAVLib@{AVAVLib}!StatusChangeType@{StatusChangeType}}
+\index{StatusChangeType@{StatusChangeType}!AVAVLib@{AVAVLib}}
+\doxysubsubsection{\texorpdfstring{StatusChangeType}{StatusChangeType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_a_v_a_v_lib_a23ba7e347aedebae84073dfef7e9d5ec}{AVAVLib.\+Status\+Change\+Type}}}
+
+
+
+Richtungsanzeige für eine Statusänderung, Beginnt der \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status}{Status}} mit dem Eintrag (z.\+B. Eintritt) oder endet dieser (z.\+B. Übertritt in ADAHschaft) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Start@{Start}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Start@{Start}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a23ba7e347aedebae84073dfef7e9d5ecaa6122a65eaa676f700ae68d393054a37}\label{namespace_a_v_a_v_lib_a23ba7e347aedebae84073dfef7e9d5ecaa6122a65eaa676f700ae68d393054a37}} 
+Start&\mbox{\hyperlink{class_a_v_a_v_lib_1_1_status}{Status}} beginnt \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{End@{End}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!End@{End}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a23ba7e347aedebae84073dfef7e9d5eca87557f11575c0ad78e4e28abedc13b6e}\label{namespace_a_v_a_v_lib_a23ba7e347aedebae84073dfef7e9d5eca87557f11575c0ad78e4e28abedc13b6e}} 
+End&\mbox{\hyperlink{class_a_v_a_v_lib_1_1_status}{Status}} endet \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8}} 
+\index{AVAVLib@{AVAVLib}!StatusType@{StatusType}}
+\index{StatusType@{StatusType}!AVAVLib@{AVAVLib}}
+\doxysubsubsection{\texorpdfstring{StatusType}{StatusType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8}{AVAVLib.\+Status\+Type}}}
+
+
+
+Mögliche Statusänderungen im AV 
+
+Offene Punkte\+:
+
+Ist eine Unterscheidung ADAH und Student im AVeV nötig? Gibt es Fördermitglieder nur in der HG? Was ist der Ex-\/\+Aktive? Reicht dazu das Ende des Aktivenstatus? \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FieldOfStudy@{FieldOfStudy}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!FieldOfStudy@{FieldOfStudy}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a8288f09465e8fa76c95bf9c6e8fa1fa1}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a8288f09465e8fa76c95bf9c6e8fa1fa1}} 
+Field\+Of\+Study&Aufnahme eines Studium in einem Studiengang \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MemberVerkehrsgast@{MemberVerkehrsgast}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!MemberVerkehrsgast@{MemberVerkehrsgast}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a21ce478f23d2ccd55d9086be9b80b9bc}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a21ce478f23d2ccd55d9086be9b80b9bc}} 
+Member\+Verkehrsgast&Verkehrsgast \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MemberYoung@{MemberYoung}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!MemberYoung@{MemberYoung}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a67d80ab314cb77e3f23b262794b93737}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a67d80ab314cb77e3f23b262794b93737}} 
+Member\+Young&Ju\+Mi \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MemberAktivitas@{MemberAktivitas}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!MemberAktivitas@{MemberAktivitas}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a4d2fca0803a47c5e9330951b10712dd3}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a4d2fca0803a47c5e9330951b10712dd3}} 
+Member\+Aktivitas&Vo\+Mi \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MemberAvStudent@{MemberAvStudent}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!MemberAvStudent@{MemberAvStudent}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a6f65b8905d824270792ccfe495afd3af}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a6f65b8905d824270792ccfe495afd3af}} 
+Member\+Av\+Student&Studentisches Mitglied im AVeV \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MemberAvFull@{MemberAvFull}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!MemberAvFull@{MemberAvFull}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8aae62822314421fb27004eb44d24213b8}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8aae62822314421fb27004eb44d24213b8}} 
+Member\+Av\+Full&Mitglied im AVeV \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MemberHgStudent@{MemberHgStudent}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!MemberHgStudent@{MemberHgStudent}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a58e27794731d0175c1283a553c60f1f3}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a58e27794731d0175c1283a553c60f1f3}} 
+Member\+Hg\+Student&Studentisches Mitglied in der HG \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MemberHgFull@{MemberHgFull}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!MemberHgFull@{MemberHgFull}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ae5b6737d5ae5bfd60d2745a5895828ab}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ae5b6737d5ae5bfd60d2745a5895828ab}} 
+Member\+Hg\+Full&Mitglied der HG \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MemberHgShares@{MemberHgShares}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!MemberHgShares@{MemberHgShares}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ab5e6dabcba3fe5d08a626c47543712cd}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ab5e6dabcba3fe5d08a626c47543712cd}} 
+Member\+Hg\+Shares&Anteilsscheine gekauft \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MemberHgSustaining@{MemberHgSustaining}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!MemberHgSustaining@{MemberHgSustaining}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a678a39a53af7ff653e3ded982472d702}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a678a39a53af7ff653e3ded982472d702}} 
+Member\+Hg\+Sustaining&Beisitzer im Vorstand der HG \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MemberGav@{MemberGav}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!MemberGav@{MemberGav}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ac07b0e674889d5585d7e16876d61291c}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ac07b0e674889d5585d7e16876d61291c}} 
+Member\+Gav&Mitglied der GAV \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MemberHonorary@{MemberHonorary}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!MemberHonorary@{MemberHonorary}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a76e9e5c9df41cc3ec75e6db3d62ff22e}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a76e9e5c9df41cc3ec75e6db3d62ff22e}} 
+Member\+Honorary&Ehrenmitglied \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StuGi@{StuGi}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!StuGi@{StuGi}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ac7f21790b7db2c29d5750cd95cc92e70}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ac7f21790b7db2c29d5750cd95cc92e70}} 
+Stu\+Gi&Als Stu\+Gi aufs Haus gezogen \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Active1X@{Active1X}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Active1X@{Active1X}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a00b9c69e369aec68c4390465c36dae64}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a00b9c69e369aec68c4390465c36dae64}} 
+Active1X&1x der Aktivitas \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Acitve2X@{Acitve2X}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Acitve2X@{Acitve2X}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a36ddab5c5aed1516db84ff16dd2f50e4}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a36ddab5c5aed1516db84ff16dd2f50e4}} 
+Acitve2X&2x der Aktivitas \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Active3X@{Active3X}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Active3X@{Active3X}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a7c5a942980cdae7a6bba47b05c6cd430}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a7c5a942980cdae7a6bba47b05c6cd430}} 
+Active3X&3x der Aktivitas \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ActiveKw@{ActiveKw}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!ActiveKw@{ActiveKw}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8afe65f8db6ee22bccb5bd18ec838e29cb}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8afe65f8db6ee22bccb5bd18ec838e29cb}} 
+Active\+Kw&Kassenwart der Aktivitas \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Adah1X@{Adah1X}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Adah1X@{Adah1X}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a8d9734327a777af993298665d21b5617}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a8d9734327a777af993298665d21b5617}} 
+Adah1X&1x AV e.\+V. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Adah2X@{Adah2X}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Adah2X@{Adah2X}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ae878621cec5687c46bfb4373be62be30}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ae878621cec5687c46bfb4373be62be30}} 
+Adah2X&2x AV e.\+V. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AdahSw@{AdahSw}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!AdahSw@{AdahSw}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a178a1c78b9ebe249eb0e8e84ae708677}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a178a1c78b9ebe249eb0e8e84ae708677}} 
+Adah\+Sw&Schriftführer AV e.\+V. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AdahKw@{AdahKw}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!AdahKw@{AdahKw}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a9481c74ff18b0d9eeea5f8c539945e5d}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a9481c74ff18b0d9eeea5f8c539945e5d}} 
+Adah\+Kw&Kassenwart AV e.\+V. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AdahAssoc@{AdahAssoc}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!AdahAssoc@{AdahAssoc}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a12ded0a686882b454735884d1a88a904}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a12ded0a686882b454735884d1a88a904}} 
+Adah\+Assoc&Beisitzer im Vorstand AV e.\+V. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chronicler@{Chronicler}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Chronicler@{Chronicler}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ae1f3acb567fbcd7798a286ab28b1bf1b}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8ae1f3acb567fbcd7798a286ab28b1bf1b}} 
+Chronicler&Chronist \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Adah@{Adah}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Adah@{Adah}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a386283eb1e9d732ee3a8e5710e128f76}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a386283eb1e9d732ee3a8e5710e128f76}} 
+Adah&Alte Dame, Alter Herr \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hg1X@{Hg1X}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Hg1X@{Hg1X}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a85ca97e2fe37a22fe79fb47c623e3508}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a85ca97e2fe37a22fe79fb47c623e3508}} 
+Hg1X&
+\begin{DoxyEnumerate}
+\item Vorsitzender Hausgesellschaft AV e.\+V. 
+\end{DoxyEnumerate}\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hg2X@{Hg2X}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Hg2X@{Hg2X}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a592ee7792e8b590443dc79206dd3cc15}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a592ee7792e8b590443dc79206dd3cc15}} 
+Hg2X&
+\begin{DoxyEnumerate}
+\item Vorsitzender Hausgesellschaft AV e.\+V. 
+\end{DoxyEnumerate}\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HgKw@{HgKw}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!HgKw@{HgKw}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a2a34f783dcec58e50ce48b7d99f3c82d}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a2a34f783dcec58e50ce48b7d99f3c82d}} 
+Hg\+Kw&Kassenwart Hausgesellschaft AV e.\+V. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HgStud@{HgStud}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!HgStud@{HgStud}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8abfe170a6937954a191d8f23de4c5c36f}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8abfe170a6937954a191d8f23de4c5c36f}} 
+Hg\+Stud&Studentisches Mitglied im Vorstand der Hausgesellschaft AV e.\+V. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HgAssoc@{HgAssoc}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!HgAssoc@{HgAssoc}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8aaef14624da4dc37dfe8fb0b58891e015}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8aaef14624da4dc37dfe8fb0b58891e015}} 
+Hg\+Assoc&Beisitzer im Vorstand der Hausgesellschaft AV e.\+V. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Gav1X@{Gav1X}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!Gav1X@{Gav1X}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a9b6dbd801ea6ff0eb3bdb43733e36767}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a9b6dbd801ea6ff0eb3bdb43733e36767}} 
+Gav1X&
+\begin{DoxyEnumerate}
+\item Vorsitzender GAV 
+\end{DoxyEnumerate}\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GavHw@{GavHw}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!GavHw@{GavHw}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a6e1e7ae089d482ff8d35d24114224fc3}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a6e1e7ae089d482ff8d35d24114224fc3}} 
+Gav\+Hw&Hauswart der GAV \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GavKw@{GavKw}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!GavKw@{GavKw}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a117c496cff3afa637a1fbab21f761e47}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8a117c496cff3afa637a1fbab21f761e47}} 
+Gav\+Kw&Kassenwart der GAV \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GavAssoc@{GavAssoc}!AVAVLib@{AVAVLib}}\index{AVAVLib@{AVAVLib}!GavAssoc@{GavAssoc}}}\mbox{\Hypertarget{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8af4c477cc8486b24b08ffdb2f5ce60201}\label{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8af4c477cc8486b24b08ffdb2f5ce60201}} 
+Gav\+Assoc&Beisitzer im Vorstand der GAV \\
+\hline
+
+\end{DoxyEnumFields}

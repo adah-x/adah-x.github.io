@@ -1,0 +1,117 @@
+\hypertarget{class_a_v_a_v_lib_1_1_status}{}\doxysection{AVAVLib.\+Status Class Reference}
+\label{class_a_v_a_v_lib_1_1_status}\index{AVAVLib.Status@{AVAVLib.Status}}
+
+
+Für die vielen verschiedenen \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status}{Status}}, die eine \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} im AV haben kann, wir ein persönlicher Trail geschrieben, jede Statusänderung ist dabei eine Datensatz, so können als Zustände (z.\+B. ist Bundesgeschwister, ist AH, ist Ju\+Mi) aus der geordneten Liste der Statusübergänge abgeleitet werden.  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_a_v_a_v_lib_a23ba7e347aedebae84073dfef7e9d5ec}{Status\+Change\+Type}} \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status_a21d1be0704dc45a4e53fc9152ca0d928}{Status\+Change\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Beginnt oder endet der \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status}{Status}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8}{Status\+Type}} \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status_af0f7c2c926a5a956a606ddaa9b5da32f}{Status\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Welcher \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status}{Status}} beginnt oder endet \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status_a5f9ef96afc86a97bc0019d343b6b4665}{Visible}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Können meine Bundegeschwister diese Statusänderung sehen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status_a9d69ae18c48e00cfd17af43154751a13}{Person}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Für welche \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} gilt die Statusänderung. \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status_abdb537b96c66dc448d25f809e4de3410}{Time\+Stamp}} = new Date\+Time()\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Time\+Stamp der Zeitpunkt zu dem der Datensatz erstellt wird. Achtung\+: Gültig ist bezogen auf einen Statustyp immer der jüngste Datensatz, weil dieser die letzte Änderung angibt. \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status_a997afb46b545622347988f9b3bfa288c}{Date}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Zeitpunkt zu der die Statusänderung eingetreten ist, beachte Time\+Stamp \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_a_v_a_v_lib_1_1_change_handle}{Change\+Handle}} \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status_a8799de224def492a566dcd10629062ac}{Change\+Handle}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Änderungsbeschreibung für genau diese Änderung. (Jede Änderung ist ein Datensatz.) \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status_af2aa1f84b9c3e1e2b0aca5cdde5473e9}{Text}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Text zur Statusänderung, Aufnahme und Beendigung eines Studiums sind auch \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status}{Status}} hier steht dann der Studiengang drin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Für die vielen verschiedenen \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status}{Status}}, die eine \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} im AV haben kann, wir ein persönlicher Trail geschrieben, jede Statusänderung ist dabei eine Datensatz, so können als Zustände (z.\+B. ist Bundesgeschwister, ist AH, ist Ju\+Mi) aus der geordneten Liste der Statusübergänge abgeleitet werden. 
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_status_a8799de224def492a566dcd10629062ac}\label{class_a_v_a_v_lib_1_1_status_a8799de224def492a566dcd10629062ac}} 
+\index{AVAVLib.Status@{AVAVLib.Status}!ChangeHandle@{ChangeHandle}}
+\index{ChangeHandle@{ChangeHandle}!AVAVLib.Status@{AVAVLib.Status}}
+\doxysubsubsection{\texorpdfstring{ChangeHandle}{ChangeHandle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_v_a_v_lib_1_1_change_handle}{Change\+Handle}} AVAVLib.\+Status.\+Change\+Handle\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Änderungsbeschreibung für genau diese Änderung. (Jede Änderung ist ein Datensatz.) 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_status_a997afb46b545622347988f9b3bfa288c}\label{class_a_v_a_v_lib_1_1_status_a997afb46b545622347988f9b3bfa288c}} 
+\index{AVAVLib.Status@{AVAVLib.Status}!Date@{Date}}
+\index{Date@{Date}!AVAVLib.Status@{AVAVLib.Status}}
+\doxysubsubsection{\texorpdfstring{Date}{Date}}
+{\footnotesize\ttfamily Date\+Time AVAVLib.\+Status.\+Date\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Zeitpunkt zu der die Statusänderung eingetreten ist, beachte Time\+Stamp 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_status_a9d69ae18c48e00cfd17af43154751a13}\label{class_a_v_a_v_lib_1_1_status_a9d69ae18c48e00cfd17af43154751a13}} 
+\index{AVAVLib.Status@{AVAVLib.Status}!Person@{Person}}
+\index{Person@{Person}!AVAVLib.Status@{AVAVLib.Status}}
+\doxysubsubsection{\texorpdfstring{Person}{Person}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} AVAVLib.\+Status.\+Person\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Für welche \mbox{\hyperlink{class_a_v_a_v_lib_1_1_person}{Person}} gilt die Statusänderung. 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_status_a21d1be0704dc45a4e53fc9152ca0d928}\label{class_a_v_a_v_lib_1_1_status_a21d1be0704dc45a4e53fc9152ca0d928}} 
+\index{AVAVLib.Status@{AVAVLib.Status}!StatusChangeType@{StatusChangeType}}
+\index{StatusChangeType@{StatusChangeType}!AVAVLib.Status@{AVAVLib.Status}}
+\doxysubsubsection{\texorpdfstring{StatusChangeType}{StatusChangeType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_a_v_a_v_lib_a23ba7e347aedebae84073dfef7e9d5ec}{Status\+Change\+Type}} AVAVLib.\+Status.\+Status\+Change\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Beginnt oder endet der \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status}{Status}}. 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_status_af0f7c2c926a5a956a606ddaa9b5da32f}\label{class_a_v_a_v_lib_1_1_status_af0f7c2c926a5a956a606ddaa9b5da32f}} 
+\index{AVAVLib.Status@{AVAVLib.Status}!StatusType@{StatusType}}
+\index{StatusType@{StatusType}!AVAVLib.Status@{AVAVLib.Status}}
+\doxysubsubsection{\texorpdfstring{StatusType}{StatusType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_a_v_a_v_lib_a7efdb74e6fa05d116bcd4ac781ca24f8}{Status\+Type}} AVAVLib.\+Status.\+Status\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Welcher \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status}{Status}} beginnt oder endet 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_status_af2aa1f84b9c3e1e2b0aca5cdde5473e9}\label{class_a_v_a_v_lib_1_1_status_af2aa1f84b9c3e1e2b0aca5cdde5473e9}} 
+\index{AVAVLib.Status@{AVAVLib.Status}!Text@{Text}}
+\index{Text@{Text}!AVAVLib.Status@{AVAVLib.Status}}
+\doxysubsubsection{\texorpdfstring{Text}{Text}}
+{\footnotesize\ttfamily string AVAVLib.\+Status.\+Text\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Text zur Statusänderung, Aufnahme und Beendigung eines Studiums sind auch \mbox{\hyperlink{class_a_v_a_v_lib_1_1_status}{Status}} hier steht dann der Studiengang drin. 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_status_abdb537b96c66dc448d25f809e4de3410}\label{class_a_v_a_v_lib_1_1_status_abdb537b96c66dc448d25f809e4de3410}} 
+\index{AVAVLib.Status@{AVAVLib.Status}!TimeStamp@{TimeStamp}}
+\index{TimeStamp@{TimeStamp}!AVAVLib.Status@{AVAVLib.Status}}
+\doxysubsubsection{\texorpdfstring{TimeStamp}{TimeStamp}}
+{\footnotesize\ttfamily Date\+Time AVAVLib.\+Status.\+Time\+Stamp = new Date\+Time()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Time\+Stamp der Zeitpunkt zu dem der Datensatz erstellt wird. Achtung\+: Gültig ist bezogen auf einen Statustyp immer der jüngste Datensatz, weil dieser die letzte Änderung angibt. 
+
+\mbox{\Hypertarget{class_a_v_a_v_lib_1_1_status_a5f9ef96afc86a97bc0019d343b6b4665}\label{class_a_v_a_v_lib_1_1_status_a5f9ef96afc86a97bc0019d343b6b4665}} 
+\index{AVAVLib.Status@{AVAVLib.Status}!Visible@{Visible}}
+\index{Visible@{Visible}!AVAVLib.Status@{AVAVLib.Status}}
+\doxysubsubsection{\texorpdfstring{Visible}{Visible}}
+{\footnotesize\ttfamily bool AVAVLib.\+Status.\+Visible\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Können meine Bundegeschwister diese Statusänderung sehen. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/dev/svn/i2cm/prj/\+AV/\+AVAV/avav/\+AVAVLib/\mbox{\hyperlink{_status_8cs}{Status.\+cs}}\end{DoxyCompactItemize}
