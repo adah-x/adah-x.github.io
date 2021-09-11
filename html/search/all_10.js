@@ -15,5 +15,6 @@ var searchData=
   ['storehandle_12',['StoreHandle',['../class_a_v_a_v_lib_1_1_image.html#ac59f2037f091ae5b2f61519e9653de4c',1,'AVAVLib::Image']]],
   ['street_13',['Street',['../class_a_v_a_v_lib_1_1_address_version.html#abc0c89d3e00d4bc5b0cd233814a6ec1e',1,'AVAVLib::AddressVersion']]],
   ['stugi_14',['StuGi',['../namespace_a_v_a_v_lib.html#a7efdb74e6fa05d116bcd4ac781ca24f8ac7f21790b7db2c29d5750cd95cc92e70',1,'AVAVLib']]],
-  ['suffixtitle_15',['SuffixTitle',['../class_a_v_a_v_lib_1_1_person_data.html#af40463d48f03dbcf4855f23781cc9ce3',1,'AVAVLib::PersonData']]]
+  ['suffixtitle_15',['SuffixTitle',['../class_a_v_a_v_lib_1_1_person_data.html#af40463d48f03dbcf4855f23781cc9ce3',1,'AVAVLib::PersonData']]],
+  ['suspended_16',['Suspended',['../namespace_a_v_a_v_lib.html#a7efdb74e6fa05d116bcd4ac781ca24f8a8bf906833cc7aea8084f552217ed9c1d',1,'AVAVLib']]]
 ];

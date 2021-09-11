@@ -6,5 +6,5 @@ var searchData=
   ['addressvaliditytype_2ecs_3',['AddressValidityType.cs',['../_address_validity_type_8cs.html',1,'']]],
   ['addressversion_2ecs_4',['AddressVersion.cs',['../_address_version_8cs.html',1,'']]],
   ['authority_2ecs_5',['Authority.cs',['../_authority_8cs.html',1,'']]],
-  ['avavlib_2eassemblyinfo_2ecs_6',['AVAVLib.AssemblyInfo.cs',['../net5_80_2_a_v_a_v_lib_8_assembly_info_8cs.html',1,'(Global Namespace)'],['../netcoreapp3_81_2_a_v_a_v_lib_8_assembly_info_8cs.html',1,'(Global Namespace)']]]
+  ['avavlib_2eassemblyinfo_2ecs_6',['AVAVLib.AssemblyInfo.cs',['../_a_v_a_v_lib_8_assembly_info_8cs.html',1,'']]]
 ];
